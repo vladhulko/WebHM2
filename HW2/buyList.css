@@ -223,6 +223,28 @@ body > div.container > div.shopping-list > div:nth-child(2) > div.quantity > but
     visibility: hidden;
 }
 
+[data-tooltip] {
+    position: relative;
+}
+[data-tooltip]:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    font-size: 12px;
+    transform: translateX(-50%) scaleY(0);
+    background-color: #232323;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: bottom;
+}
+[data-tooltip]:hover:before {
+    transform: translateX(-50%) scaleY(1);
+}
+
+
     @media (max-width: 500px) {
         .container {
             flex-direction: column;
