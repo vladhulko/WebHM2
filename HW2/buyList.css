@@ -20,26 +20,25 @@
     background-color: #5a07e7;
 }
 
-    @media print {
-        .badge {
-            background-color: white;
-            border: 1px solid #42396a;
-            color: #42396a;
-            line-height: normal;
-        }
-
-        .title {
-            display: none;
-        }
-
-        .badge::after {
-            content: "Vlad Hulko";
-            display: block;
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
+@media print{
+    *{
+        -print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
     }
+    .badge{
+        background-color: white;
+        color: black;
+        border:3px solid purple;
+    }
+    .buy-list-text{
+        position: absolute;
+        visibility: hidden;
+    }
+    .badge > .created-by, .badge > .my-name{
+        color:black;
+        margin-left: 10px;
+    }
+}
 
     p {
         line-height: 5px;
