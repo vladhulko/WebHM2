@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="buyList.css" rel="stylesheet" type="text/css">
+    <title>Buy List</title>
+</head>
+<body>
+<div class="badge">
+    <span>Buy List</span>
+    <p style="font-size:12px">Created by:</p>
+    <p>Vlad Hulko</p>
+</div>
+<div class="container">
+    <div class="shopping-list">
+        <div class="item">
+            <input type="text" placeholder="Назва товару">
+            <button class="add">Додати</button>
+        </div>
+        <div class="item">
+            <div class="item-name"><span class="completed">Помідори</span></div>
+            <div class="quantity">
+                <button class="decrease">-</button>
+                <span>2</span>
+                <button class="increase">+</button>
+            </div>
+            <div class="status">
+                <button class="buy">Не куплено</button>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-name"><span>Печиво</span></div>
+            <div class="quantity">
+                <button class="decrease">-</button>
+                <span>2</span>
+                <button class="increase">+</button>
+            </div>
+            <div class="status">
+                <button class="buy">Куплено</button>
+                <button class="delete">×</button>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-name"><span>Сир</span></div>
+            <div class="quantity">
+                <button class="decrease">-</button>
+                <span>1</span>
+                <button class="increase">+</button>
+            </div>
+            <div class="status">
+                <button class="buy">Куплено</button>
+                <button class="delete">×</button>
+            </div>
+        </div>
+    </div>
+    <div class="summary">
+        <div class="goods">
+            <div><strong>Залишилося</strong></div>
+        </div>
+        <div class="goods">
+            <div>
+                <span class="goods-name">Печиво
+                    <span class="number">2</span>
+                </span>
+            </div>
+            <div>
+                <span class="goods-name">Сир
+                    <span class="number">1</span>
+                </span>
+            </div>
+        </div>
+        <div class="goods">
+            <div><strong>Куплено</strong></div>
+        </div>
+        <div class="goods">
+            <div>
+                <span class="goods-name">
+                    <span class="completed">Помідори
+                        <span class="number">2</span>
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

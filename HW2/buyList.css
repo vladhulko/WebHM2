@@ -1,0 +1,230 @@
+.badge {
+    position: fixed;
+    bottom: 0;
+    left: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: #784ce7;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-family: Arial, serif;
+    font-weight: 700;
+    transition: transform, 0.5s;
+}
+
+.badge:hover {
+    height: 100px;
+    background-color: #5a07e7;
+}
+
+    @media print {
+        .badge {
+            background-color: white;
+            border: 1px solid #42396a;
+            color: #42396a;
+            line-height: normal;
+        }
+
+        .title {
+            display: none;
+        }
+
+        .badge::after {
+            content: "Vlad Hulko";
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    }
+
+    p {
+        line-height: 5px;
+    }
+
+    .container {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+
+    .shopping-list {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .summary {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        flex: 0.5;
+        min-width: 200px;
+    }
+
+    input[type="text"]::placeholder{
+        text-indent: 10px;
+    }
+
+
+input[type="text"] {
+    width: calc(100% - 100px);
+    padding: 11.5px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+button.add {
+    width: 100px;
+    height: 40px;
+    border-radius: 0 4px 4px 0;
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #0056b3;
+    border-bottom: 3px solid #0056b3;
+}
+
+    .item, .goods {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        flex: 1;
+        height: 100%;
+    }
+
+    .item:last-child, .goods:last-child {
+        border-bottom: none;
+    }
+
+    .item-name, .quantity, .status{
+        display: flex;
+        width: 33%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item-name {
+        flex: 1;
+        justify-content: left;
+    }
+
+    .completed {
+        text-decoration: line-through;
+    }
+
+    .quantity {
+        gap: 5%;
+        flex: 1;
+        justify-content: center;
+        display: flex;
+    }
+
+    .quantity span {
+        padding: 6px 10px;
+        border-radius: 5px;
+        background-color: #cccccc;
+        text-align: center;
+    }
+
+    .quantity button {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+    }
+
+    .quantity button.decrease {
+        background-color: red;
+        color: white;
+        border: 1px solid #aa3636;
+        border-bottom: 3px solid #aa3636;
+    }
+
+    .quantity button.increase {
+        background-color: limegreen;
+        color: white;
+        border: 1px solid #559c33;
+        border-bottom: 3px solid #559c33;
+    }
+
+    .status {
+        display: flex;
+        gap: 5px;
+        flex: 1;
+        justify-content: right;
+    }
+
+    .status button {
+        padding: 3% 7%;
+        border-radius: 4px;
+        border: 1px solid #575753;
+    }
+
+    .status button.buy {
+        background-color: #ededed;
+        color: #232323;
+        border: 1px solid #9c9999;
+        border-bottom: 3px solid #9c9999;
+    }
+
+    .status button.delete {
+        background-color: red;
+        color: white;
+        border: 1px solid #aa3636;
+        border-bottom: 3px solid #aa3636;
+    }
+
+    .goods-name{
+        padding: 8px;
+        background-color: #cccccc;
+        border-radius: 5px;
+        flex: 1;
+        margin-right: 5px;
+        display: inline-block;
+
+    }
+
+    .number{
+        color: white;
+        font-weight: bold;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        border-radius: 50%;
+        background-color: #ff7e0e;
+    }
+
+    .goods-name > .completed  > .number{
+        text-decoration: line-through;
+    }
+
+body > div.container > div.shopping-list > div:nth-child(2) > div.quantity > button.decrease{
+    visibility: hidden;
+}
+body > div.container > div.shopping-list > div:nth-child(2) > div.quantity > button.increase{
+    visibility: hidden;
+}
+
+    @media (max-width: 500px) {
+        .container {
+            flex-direction: column;
+        }
+    }
